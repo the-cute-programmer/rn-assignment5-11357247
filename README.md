@@ -5,8 +5,6 @@ This mobile application was built using React Native, leveraging the `react-navi
 ## Features
 
 - **Home Screen:** Displays a welcome message, a debit card image, and transaction details.
-- **My Cards Screen:** A placeholder screen for managing user cards.
-- **Statistics Screen:** A placeholder screen for displaying user statistics.
 - **Settings Screen:** Allows users to change settings, including switching between light and dark themes.
 
 ## Screenshots
