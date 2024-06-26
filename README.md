@@ -1,6 +1,6 @@
 # My Mobile Application
 
-This mobile application was built using React Native, leveraging the `react-navigation` library for navigation and `styled-components` for theming. The app includes several screens such as Home, My Cards, Statistics, and Settings, each with its own unique functionality. The application also supports switching between light and dark themes.
+This mobile application was built using React Native, leveraging the `react-navigation` library for navigation and `styled-components` for theming. The app includes two screens namely as Home and Settings. The application also supports switching between light and dark themes.
 
 ## Features
 
