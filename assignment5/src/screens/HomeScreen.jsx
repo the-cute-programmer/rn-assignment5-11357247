@@ -1,15 +1,15 @@
 import React from "react";
 import {View, StyleSheet, Text, Image} from "react-native";
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
     return(
         <View style={styles.container}>
             <View style={styles.header}>
                 <View style={styles.profileView}>
                     <Image source={require('../assets/profile.png')}></Image>
-                    <View>
-                        <Text>Welcome back,</Text>
-                        <Text>Eric Atsu</Text>
+                    <View style={{paddingLeft: 15}}>
+                        <Text style={{fontSize: 14, color: '#aaa'}}>Welcome back,</Text>
+                        <Text style={{fontSize: 22}}>Eric Atsu</Text>
                     </View>
                 </View>
                 <View style={styles.search}>
@@ -41,6 +41,50 @@ const HomeScreen = () => {
                 <Text>Transaction</Text>
                 <Text style={styles.sellAll}>Sell all</Text>
             </View>
+
+            <View style={styles.transaction}>
+                <View style={styles.transactionImg}>
+                    <Image source={require('../assets/apple.png')} ></Image>
+                    <View style={{paddingLeft: 10}}>
+                        <Text>Apple</Text>
+                        <Text style={{fontSize: 11, color: '#aaa'}}>Entertainment</Text>
+                    </View>
+                </View>
+                <Text>- $5.99</Text>
+            </View>
+
+            <View style={styles.transaction}>
+                <View style={styles.transactionImg}>
+                    <Image source={require('../assets/spotify.png')} ></Image>
+                    <View style={{paddingLeft: 10}}>
+                        <Text>Spotify</Text>
+                        <Text style={{fontSize: 11, color: '#aaa'}}>Music</Text>
+                    </View>
+                </View>
+                <Text>- $122,99</Text>
+            </View>
+
+            <View style={styles.transaction}>
+                <View style={styles.transactionImg}>
+                    <Image source={require('../assets/moneyTransfer.png')} ></Image>
+                    <View style={{paddingLeft: 10}}>
+                        <Text>Money Transfer</Text>
+                        <Text style={{fontSize: 11, color: '#aaa'}}>Transaction</Text>
+                    </View>
+                </View>
+                <Text style={{color: 'blue'}}>+ $300</Text>
+            </View>
+
+            <View style={styles.transaction}>
+                <View style={styles.transactionImg}>
+                    <Image source={require('../assets/grocery.png')} ></Image>
+                    <View style={{paddingLeft: 10}}>
+                        <Text>Grocery</Text>
+                        <Text style={{fontSize: 11, color: '#aaa'}}>Shopping</Text>
+                    </View>
+                </View>
+                <Text>- $88</Text>
+            </View>
         </View>
     );
 };
@@ -52,7 +96,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     header: {
-        paddingTop: 10,
+        paddingTop: 40,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
@@ -63,13 +107,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     search: {
-        padding: 10,
+        padding: 30,
     },
     card: {
         alignItems: 'center',
         padding: 20,
     },
     actionView: {
+        paddingTop: 20,
+        paddingBottom: 20,
         flexDirection: 'row',
         justifyContent: 'space-around',
     },
@@ -84,7 +130,19 @@ const styles = StyleSheet.create({
     },
     sellAll: {
         color: 'blue',
-    }
+    },
+      transaction: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: 8,
+        margin: 10,
+        
+      },
+      transactionImg: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+      }
 });
 
 export default HomeScreen;
